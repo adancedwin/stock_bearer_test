@@ -1,5 +1,5 @@
-class Bearer < ApplicationRecord
-  has_many :stocks
+# frozen_string_literal: true
 
-  validates :name, presence: true, uniqueness: true
+class Bearer < ApplicationRecord
+  has_many :stocks, dependent: :destroy
 end
